@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>twenty-second</title>
+</head>
+<style type="text/css">
+#con1 {
+    width: 300px;
+    height: 200px;
+    margin: 0 auto;
+    background-color: green;
+    text-align: center;
+}
+</style>
+<script type="text/javascript">
+function cal() {
+    var radius = document.getElementById("t1").value;
+    var s;
+    s = Math.PI * radius * radius;
+    document.getElementById('t2').value = s.toFixed(2);
+}
+
+function fun1(size) {
+    var con = document.getElementById("content");
+    con.style.fontSize = 'size';
+    //document.getElementById("content").style.fontSize='30px';
+
+}
+
+function test() {
+	document.getElementById('t1').value = ' ';
+    document.getElementById('t2').value = ' ';
+}
+</script>
+
+<body>
+    <div id="con1">
+        <h1 align="center">圆周率计算</h1>
+        <p>半径：
+            <input type="text" id="t1">
+        </p>
+        <p>面积：
+            <input type="text" id="t2">
+        </p>
+        <input type="button" id="b1" value="计算" onclick="cal();">
+        <input type="button" id="b2" value="清空" onclick="test()">
+    </div>
+    <h1>HTML DOM 属性</h1>
+    <input type="button" onclick="fun1('30px')" value="大">
+    <input type="button" onclick="fun1('24px')" value="中">
+    <input type="button" onclick="fun1('20px')" value="小">
+    <div id="content">
+        <p>可通过 JavaScript （以及其他编程语言）对 HTML DOM 进行访问。 所有 HTML 元素被定义为对象，而编程接口则是对象方法和对象属性。 方法是您能够执行的动作（比如添加或修改元素）。 属性是您能够获取或设置的值（比如节点的名称或内容）。
+        </p>
+        <p>
+            获取元素内容的最简单方法是使用 innerHTML 属性。 innerHTML 属性对于获取或替换 HTML 元素的内容很有用。</p>
+    </div>
+</body>
+
+</html>

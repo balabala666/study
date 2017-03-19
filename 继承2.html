@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>senventeenth</title>
+</head>
+<script>
+function Human(type,use){
+	this.type=type;
+	this.use=use;
+	Human.prototype.dif=function(){
+		alert("人类能说话");
+		}
+	}
+function King(type,use,right){
+	Human.call(this,type,use);  //用对象冒充继承HUMAN的属性
+	this.right=right;
+	}
+	King.prototype=new Human();  //用原型类继承HUMAN的方法
+	
+var Jacky=new King("人类","使用工具","统治");
+alert(King  instanceof Human);
+alert(Jacky instanceof King);
+alert(Jacky.type+"\n"+Jacky.right);
+Jacky.dif();
+</script>
+<body>
+</body>
+</html>

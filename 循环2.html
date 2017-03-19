@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>seventh</title>
+</head>
+<script language="javascript">
+var nums = new Array();
+var message = "输入的值：\n";
+var total = 0;
+var UserInput;
+var ArrayIndex = 0;
+do {
+    UserInput = prompt("输入一个数字，或者按0退出");
+    nums[ArrayIndex] = UserInput;
+    ArrayIndex++;
+    total += Number(UserInput);
+    message += UserInput + "\n";
+}
+while (UserInput != 0)
+message += "总数：" + total;
+alert(message);
+document.write(message + "<br>" + total + "<br>" + UserInput); <!--document .write的用法-->
+</script>
+
+<body>
+</body>
+
+</html>

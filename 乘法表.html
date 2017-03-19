@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>nineth</title>
+</head>
+<body>
+<!--<table cellpadding="6" cellspacing="0" style="border-collapse:collapse; border:none;">-->
+<script language="javascript">
+var n=prompt("需要多少行");
+n=parseInt(n,10);
+var i,j,sum;
+function mul(){
+for(j=1;j<=n;j++){
+	document.write('<tr>');
+   for(i=1;i<=j;i++){
+   sum=i*j;
+  document.write(j+"x"+i+"="+sum+"&nbsp");
+   //document.write("<td style='border:2px solid #004B8A; background:#FFFFFF;'>"+i+'</td>');
+   }
+   document.write("<br>");
+  // document.write("</tr>");
+}
+}
+</script>
+<!--</table>-->
+
+<input type="button" id="result" name="result" onclick="mul()" value="乘法表">
+</body>
+</html>
+
+<!--<body bgcolor="#e0f1ff">
+<table cellpadding="6" cellspacing="0" style="border-collapse:collapse; border:none;">
+<script language="javascript">
+var n=prompt("需要多少行");
+n=parseInt(n,10);
+for(var i=1;i<=n;i++){			//乘法表一共九行
+	document.write("<tr>");		//每行是table的一行
+    for(j=1;j<=n;j++)			//每行都有9个单元格
+		if(j<=i)				//有内容的单元格
+	        document.write("<td style='border:2px solid #004B8A; background:#FFFFFF;'>"+i+"*"+j+"="+(i*j)+"</td>");
+		else					//没有内容的单元格
+			document.write("<td style='border:none;'></td>");
+    document.write("</tr>");
+}
+</script>
+</table>
+-->

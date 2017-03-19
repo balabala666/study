@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>eighteenth</title>
+</head>
+<script>
+function Game(name,arr,home,weapon){
+	this.name=name;
+	this.job=arr;
+	this.home=home;
+	this.weapon=weapon?weapon:"法杖";
+	this.speak=function(){
+		alert("我要恢复战士光荣");
+		}
+	}
+var user=new Game("亚瑟",["战士","剑士"],"深渊");
+for(var i in user)
+{
+if (typeof(user[i])=='function')
+document.writeln("方法为："+user.speak()+"<br/>");
+else
+document.writeln("属性为："+i+":"+user[i]+"<br/>");
+}
+</script>
+<body>
+</body>
+</html>

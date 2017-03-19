@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>fourteenth</title>
+</head>
+<script>
+function Swordsman(){
+	Swordsman.prototype.name="盖聂";
+	Swordsman.prototype.weapon="渊虹";
+	Swordsman.prototype.run=function(){
+		return this.name+"的武器是"+this.weapon;
+		}
+	}
+var sword=new Swordsman();
+var sword1=new Swordsman();
+alert(sword.run()==sword1.run());
+</script>
+<body>
+</body>
+</html>

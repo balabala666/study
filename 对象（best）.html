@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>fifteenth</title>
+</head>
+<script>
+function Monster(name, arr) {
+    constructor: Monster,
+    this.name = name,
+    this.job = arr;
+    Monster.prototype.run = function() {
+        return this.name + "的工作是" + this.job;
+    }
+}
+var sb1 = new Monster("孙悟空", ["打怪", "守护", "取经"]);
+var sb2 = new Monster("猪八戒", ["保护师傅", "化斋", "娶老婆", "搞笑"]);
+alert(sb1.run() + "\n" + sb2.run());
+alert(sb1.run() + "\n" + sb2.run());
+document.write(sb1.run() + "<br>" + sb2.run());
+</script>
+
+<body>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>tenth</title>
+</head>
+<style type="text/css">
+input{
+	width:100px;
+	height:60px;
+	margin:30px;
+}
+</style>
+<body>
+<input type="button" onClick="del()" value="delete"><br>
+<input type="button" onClick="creatInput()" value="add"><br>
+<script>
+var i=0;
+function del(){
+	if(confirm("确定要删除吗")){
+	   alert("已经删除");
+	   document.body.removeChild(o);
+	}
+	   else
+	   alert("取消删除");
+	}
+function creatInput(){
+	
+	var o=document.createElement("input");
+	o.type="button";
+	o.value="b(" + i++ +")";
+	document.body.appendChild(o);
+	o.addEventListener("click",creatInput);  //使其他按钮都具有增加的功能
+	o = null;//及时解除不再使用的变量引用,即将其赋值为 null; 
+	}
+</script>
+</body>
+</html>

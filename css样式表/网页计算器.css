@@ -1,0 +1,36 @@
+@charset "utf-8";
+/* CSS Document */
+<style type="text/css">
+table{
+	border:6px outset #FF0;
+	margin:0 auto;
+	font-size:24px;
+	background-color:#999;
+
+	}
+#tab1,#tab2,#tab3{
+		border:2px outset #666;
+		padding:5px;
+		}
+input{
+	box-shadow:5px 5px 2px #666666 inset;
+	font-size:24px;
+	padding:5px;
+	}
+#input-in{
+	height:70px;
+	width:90%;
+	margin-left:20px;
+	font-size:26px;
+	text-align:right;
+}
+[type=button]{
+	height:50px;
+	width:70px;
+	border:2px groove #666;
+	border-radius:5px;
+	box-shadow:2px 3px 2px #CCCCCC inset;
+	}
+#button-q,#button-p{
+	box-shadow:7px 3px 2px #333333 none;}
+</style>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <title>twenty-fifth</title>
+</head>
+
+<body>
+    <p>会员ID：
+        <input type="text" id="t1">
+    </p>
+    <p>密码： &nbsp;
+        <input type="text" id="t2">
+    </p>
+    <input type="button" id="b1" value="增加" onclick="addv()">
+    <input type="button" id="b2" value="减少" onclick="minusv()">
+    <ul div id="ulq">
+        <h1>会员名单：</h1>
+        <br>
+    </ul>
+    <script type="text/javascript">
+    function addv() {
+        var id = document.getElementById('t1').value;
+        var password = document.getElementById('t2').value;
+        var ulObj = document.getElementById('ulq');
+        var liObj = document.createElement('li');
+        if (id != '' && password != '') {
+            liObj.innerHTML = "会员ID：" + id + "<br>" + "密码：" + password;
+            ulObj.appendChild(liObj);
+        } else
+            alert("输入值不能为空");
+    }
+
+    function minusv() {
+        var ulOb = document.getElementById('ulq');
+        var id = document.getElementById("t1").value;
+        var liOb = document.getElementsByTagName('li');
+        for (var i = 0; i <= liOb.length; i++) {
+            var VIP = liOb[i].innerHTML;
+            if (VIP.indexOf(id) != -1)
+                ulOb.removeChild(liOb[i]);
+          
+        }
+    }
+    </script>
+</body>
+
+</html>

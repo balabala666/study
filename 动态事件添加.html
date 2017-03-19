@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>eleventh</title>
+</head>
+<style type="text/css">
+input{
+	width:100px;
+	height:60px;
+	margin:10px;
+}
+</style>
+<body>
+<input type="button" id="b1" value="b1"><br>
+<input type="button" id="b2" value="b2" onClick="addclick(b1)">
+<script>
+ function addclick(o){
+	 o.onclick=function(){
+		 alert("动态事件添加成功");
+		 }
+	 }
+</script>
+</body>
+</html>

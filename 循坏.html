@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>fifth</title>
+</head>
+<script>
+var num=prompt("请输入一个数字");
+var x,y,a,b;
+num=parseInt(num,10);
+for(x=0;x<=num;x++){
+   for(y=0;y<(num-x);y++)
+   document.write('&nbsp');
+   for(y=0;y<2*(x-1)+1;y++)
+   document.write('*');
+   document.write('<br>');
+}
+for(a=num;a>0;a--){
+	for(b=0;b<(num-a);b++)
+	document.write("&nbsp;");
+	for(b=0;b<2*(a-1)+1;b++)
+	document.write("*");
+	document.write("<br>");
+	}
+</script>
+<body>
+</body>
+</html>

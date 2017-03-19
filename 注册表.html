@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>twelfth</title>
+</head>
+<style type="text/css">
+table{
+      margin: 20px auto;
+     border: 2px solid orange;
+    }
+	td{
+		background-color:#06F;
+		padding: 5px;
+		}
+select,input{
+	width:190px;
+	height:40px;
+	}
+	[type=radio]{
+      width: 30px;height: 30px;
+    }
+	[type=submit],[type=reset]{
+      width: 100px;height: 50px;
+	   margin:10px; border-radius:20px;
+    }
+</style>
+<body>
+<script>
+function a(id){
+	return document.getElementById(id);
+	}
+	function check(){
+		if(a('st2').value==a('st3').value)
+		return true;
+		else
+		alert("密码输入不一致");
+		}
+function put(){
+	var st=' ';
+	st+="\n用户名：";
+	st+=a('st1').value;
+	st+="\n密码：";
+	st+=a('st2').value;
+	st+="\n联系电话：";
+	st+=a('st4').value;
+	st+='\n性别：';
+    st+=a('male').checked?'男':'女';
+    st+='\n 学历：';
+    st+=a('select').value
+	alert('用户信息：\n'+st);
+	}
+</script>
+<table width="300" align="center">
+  <tr>
+    <td width="100" height="40"><div align="center">用户名：</div></td>
+    <td width="200"><input type="text"  id="st1" ></td>
+  </tr>
+  <tr>
+    <td height="40"><div align="center">密码：</div></td>
+    <td><input type="password" id="st2"></td>
+  </tr>
+  <tr>
+    <td height="40"><div align="center">确认密码：</div></td>
+    <td><input type="password" id="st3" onBlur="check()"></td>
+  </tr>
+  <tr>
+    <td height="40"><div align="center">联系电话：</div></td>
+    <td><input type="text"  id="st4" ></td>
+  </tr>
+  <tr>
+    <td height="40"><div align="center">性别：</div></td>
+    <td><input type="radio" name="male" id="male" >男   <!--name要相同，不然就不是单选-->
+    <input type="radio" name="male" id="female" >女
+    </td>
+  </tr>
+  <tr>
+    <td height="40"><div align="center">学历：</div></td>
+    <td><select id="select">
+    <option value="大专">大专</option>
+    <option value="本科">本科</option>
+    <option value="研究生">研究生</option>
+    <option value="博士生">博士生</option>
+    </select>
+    </td>
+  </tr>
+  <tr >
+    <td height="40" colspan="2">
+    <input type="submit" value="提交" id="submit" onClick="put()">
+    <input type="reset" value="重置" id="reset">
+    </td>
+  </tr>
+</table>
+</body>
+</html>

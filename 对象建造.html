@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>thirteenth</title>
+</head>
+
+<body>
+    <script>
+    function cp(name, weapon) {
+        var people = new Object();
+        people.name = name;
+        people.weapon = weapon;
+        people.fun = function() {
+            return this.name + "的武器是" + this.weapon;
+        }
+        return people;
+    }
+    var sun = cp("孙悟空", "金箍棒");
+    var zhu = cp("猪八戒", "钉耙");
+    alert(sun.fun());
+    alert(zhu.fun());
+    document.writeln(sun.fun());
+    document.writeln(zhu.fun());
+    </script>
+    <script>
+    //构造函数模式
+    //注意：构造函数不需要使用 return语句返回对象，它的返回是自动完成的
+    function People(name, weapon) {
+        this.name = name;
+        this.weapon = weapon;
+        this.run = function() {
+            return this.name + '的武器是' + this.weapon
+        }
+    }
+    var wujing = new People('沙悟净', '禅杖');
+    alert(wujing.run());
+    // 调用方法   
+    var monster = new Object();
+    People.call(monster, "妖怪", "斧头");
+    alert(monster.run() + "\n" + monster.name);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* CSS Document */
+
+table{
+	border:6px outset #FF0;
+	margin:0 auto;
+	font-size:24px;
+	background-color:#999;
+
+	}
+#tab1,#tab2,#tab3{
+		border:2px outset #666;
+		padding:5px;
+		}
+input{
+	box-shadow:5px 5px 2px #666666 inset;
+	font-size:24px;
+	padding:5px;
+	}
+#input-in{
+	height:65px;
+	width:90%;
+	margin-left:20px;
+	font-size:26px;
+	text-align:right;
+}
+[type=button]{
+	height:50px;
+	width:70px;
+	border-radius:10px;
+	box-shadow:3px 3px 2px #CCCCCC inset;
+	}
+[type=button]:hover{
+	background-color:#CCC;
+	cursor:pointer;}	
